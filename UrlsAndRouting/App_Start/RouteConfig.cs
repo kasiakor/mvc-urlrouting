@@ -12,8 +12,8 @@ namespace UrlsAndRouting
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
-
-            routes.MapRoute("MyRoute", "{controller}/{action}");
+            //3rd param object defaults
+            routes.MapRoute("MyRoute", "{controller}/{action}", new { controller = "Home", action = "Index" });
                 //name: "Default",
                 //url: "{controller}/{action}/{id}",
                 //defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }  
