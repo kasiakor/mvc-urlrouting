@@ -12,6 +12,12 @@ namespace UrlsAndRouting
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+
+            //preserve old url Home/Index, new url Shop/Index
+            routes.MapRoute("ShopSchema", "Shop/{action}", new { controller = "Home" });
+
+            //static segments
+            //routes.MapRoute("", "P{controller}/{action}", new { controller = "Home", action = "Index" });
             //3rd param object defaults
             routes.MapRoute("MyRoute", "{controller}/{action}", new { controller = "Home", action = "Index" });
                 //name: "Default",
