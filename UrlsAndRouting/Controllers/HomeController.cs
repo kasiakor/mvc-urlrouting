@@ -9,10 +9,11 @@ namespace UrlsAndRouting.Controllers
     public class HomeController : Controller
     {
         // GET: Home
-        public ActionResult Index()
+        public ActionResult Index(string id = "default")
         {
             ViewBag.Controller = "Home";
             ViewBag.Action = "Index";
+            ViewBag.Id= id;
             return View("ActionName");
         }
 
