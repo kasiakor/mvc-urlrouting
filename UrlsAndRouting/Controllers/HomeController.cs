@@ -25,7 +25,8 @@ namespace UrlsAndRouting.Controllers
 
             //matches a URL against the route
             //Home/CustomVariable/Hello with id="Helllo"
-            ViewBag.CustomVariable = id;
+            //if id not provided id = null. ?? returns first no null value
+            ViewBag.CustomVariable = id ?? "<no value>";
             return View("CustomVariable");
         }
     }
