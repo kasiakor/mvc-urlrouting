@@ -18,5 +18,11 @@ namespace UrlsAndRouting.Controllers
             ViewBag.Id = id;
             return View("ActionName");
         }
+
+        [Route("Users/Add/{user}/{id}")]
+        public string Create(string user, int id)
+        {
+            return string.Format("The user name is {0}, and her id is {1}", user, id);
+        }
     }
 }
