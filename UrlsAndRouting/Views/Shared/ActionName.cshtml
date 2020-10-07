@@ -16,11 +16,15 @@
     <div>The id is:  @ViewBag.Id</div>
     <div>
         @*<a class="myCssClass" href="/" id="myAnchorTagId">This is an outgoing url</a>*@
-        @Html.ActionLink("This is an outgoing url", "Index", null, new { id = "myAnchorTagId", @class = "myCssClass" })
+        @*@Html.ActionLink("This is an outgoing url", "Index", null, new { id = "myAnchorTagId", @class = "myCssClass" })*@
     </div>
     <div>
         @*htt://myserver.mydomain.com:44349/Home/Index/MyId#myFragmentName*@
-        @Html.ActionLink("This is an outgoing url", "Index", "Home", "https", "myserver.mydomain.com", "myFragmentName", new { id = "MyId" }, new { id = "myAnchorTagId", @class = "myCssClass" })
+        @*@Html.ActionLink("This is an outgoing url", "Index", "Home", "https", "myserver.mydomain.com", "myFragmentName", new { id = "MyId" }, new { id = "myAnchorTagId", @class = "myCssClass" })*@
+
+        @*string actionName, string controllerName, object route values*@
+        My url is: 
+        @Url.Action("Index", "Home", new { id = "Url"} )
     </div>
 </body>
 </html>
