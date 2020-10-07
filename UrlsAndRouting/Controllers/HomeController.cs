@@ -30,5 +30,10 @@ namespace UrlsAndRouting.Controllers
             ViewBag.CustomVariable = id ?? "<no value>";
             return View("CustomVariable");
         }
+
+        public RedirectToRouteResult MyActionMethod()
+        {
+            return RedirectToAction("Index", "Customer", new { id = "Monkey"});
+        }
     }
 }
