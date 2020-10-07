@@ -11,13 +11,13 @@ namespace UrlsAndRouting.Controllers
     {
         // GET: Customer
         //~ prefix not applied
-        [Route("~/Test")]
+        //[Route("~/Test")]
         public ActionResult Index(string id)
         {
             ViewBag.Controller = "Customer";
             ViewBag.Action = "Index";
             //when route attribute is added the new static route has been created. we lost id segment.
-            ViewBag.Id = id;
+            ViewBag.Id =id ?? "<no value>";
             return View("ActionName");
         }
 

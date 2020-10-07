@@ -15,8 +15,8 @@
     <div>The action method is:  @ViewBag.Action</div>
     <div>The id is:  @ViewBag.Id</div>
     <div>
-        @Html.ActionLink("This is an outgoing url", "CustomVariable")
+        @*<a class="myCssClass" href="/" id="myAnchorTagId">This is an outgoing url</a>*@
+        @Html.ActionLink("This is an outgoing url", "Index", null, new { id = "myAnchorTagId", @class = "myCssClass" })
     </div>
 </body>
 </html>
-

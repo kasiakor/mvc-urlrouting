@@ -10,7 +10,7 @@ namespace UrlsAndRouting
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             //disabled by default
-            routes.MapMvcAttributeRoutes();
+            //routes.MapMvcAttributeRoutes();
 
             routes.MapRoute("MyRoute", "{controller}/{action}/{id}", new { controller = "Home", action = "Index", id = UrlParameter.Optional });
 
