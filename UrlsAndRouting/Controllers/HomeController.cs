@@ -35,5 +35,10 @@ namespace UrlsAndRouting.Controllers
         {
             return RedirectToAction("Index", "Customer", new { id = "Monkey"});
         }
+
+        public RedirectToRouteResult MyActionMethod2()
+        {
+            return RedirectToRoute(new {controller = "Customer", action = "Index", id = "Banana" });
+        }
     }
 }
