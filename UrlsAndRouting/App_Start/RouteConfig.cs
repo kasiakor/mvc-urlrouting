@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-using System.Web.Mvc.Routing.Constraints;
+﻿using System.Web.Mvc;
 using System.Web.Routing;
 
 namespace UrlsAndRouting
@@ -17,7 +12,7 @@ namespace UrlsAndRouting
             //disabled by default
             routes.MapMvcAttributeRoutes();
 
-            routes.MapRoute("MyRoute0", "{controller}/{action}/{id}", new { controller = "Home", action = "Index", id = "DefaultId" });
+            routes.MapRoute("MyRoute", "{controller}/{action}/{id}", new { controller = "Home", action = "Index", id = UrlParameter.Optional });
 
             ///Home/Index/9 9 will be skipped and Index will return ActionName View
             ///id is null but default value is provided
