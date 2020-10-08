@@ -26,5 +26,9 @@
         My url is: 
         @Url.Action("Index", "Home", new { id = "Url"} )
     </div>
+    <div>
+        @*to override routing*@
+        @Html.RouteLink("Click me", "MyRoute", "Index", "Customer")
+    </div>
 </body>
 </html>
