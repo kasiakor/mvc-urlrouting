@@ -1,5 +1,6 @@
 ﻿using System.Web.Mvc;
 using System.Web.Routing;
+using UrlsAndRouting.Infrastructure;
 
 namespace UrlsAndRouting
 {
@@ -9,6 +10,13 @@ namespace UrlsAndRouting
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+
+            //legacy urls
+            //route base item, object
+            //target urls
+            routes.Add(new LegacyRoute(
+                "~/articles/vegetarian",
+                "~/old/expired/page"));
             //disabled by default
             //routes.MapMvcAttributeRoutes();
 
