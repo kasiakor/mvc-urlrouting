@@ -14,5 +14,21 @@
 </head>
 <body>
     <h2>Admin Area Index</h2>
+    <h3>Generating links</h3>
+    <div>
+        @*<a href="/Admin/Home/About">Click me</a>*@
+        @*Action method in the same area*@
+        @Html.ActionLink("Click me", "About")
+    </div>
+    <div>
+        @*<a href="/Services/Home">Click me to go to another area</a>*@
+        @*Action method in the different area*@
+        @Html.ActionLink("Click me to go to another area", "Index", new { area = "Services" })
+    </div>
+    <div>
+        @*<a href="/Home/Index">Click me to go to high level controller</a>*@
+        @*Action method in the different area*@
+        @Html.ActionLink("Click me to go to high level controller", "Index", new { area = "" })
+    </div>
 </body>
 </html>
