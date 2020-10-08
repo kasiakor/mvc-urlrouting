@@ -6,6 +6,11 @@ using System.Web.Mvc;
 
 namespace UrlsAndRouting.Controllers
 {
+
+    //routearea will not be applied to method that dont have any route attribute - changepassword
+    //or ~ prefix not applied
+
+    [RouteArea("Services")]
     [RoutePrefix("Users")]
     public class CustomerController : Controller
     {
@@ -29,7 +34,7 @@ namespace UrlsAndRouting.Controllers
             return string.Format("The user name is {0}, and her id is {1}", user, id);
         }
         // prefix used  [Route("Users/Add/{user}/{password}")]
-        [Route("Add/{user}/{password}")]
+        //[Route("Add/{user}/{password}")]
         public string ChangePassword(string user, string password)
         {
             return string.Format("The user name is {0}, and her new password is {1}", user, password);

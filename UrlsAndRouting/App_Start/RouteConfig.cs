@@ -18,10 +18,10 @@ namespace UrlsAndRouting
                 "~/articles/vegetarian",
                 "~/old/expired/page"));
             //disabled by default
-            //routes.MapMvcAttributeRoutes();
+            routes.MapMvcAttributeRoutes();
 
             //constraints added to remove error related to home/index in Areas, multiple types
-            routes.MapRoute("MyRoute", "{controller}/{action}/{id}", new { controller = "Home", action = "Index", id = UrlParameter.Optional }, new[] { "UrlsAndRouting.Controllers" });
+            routes.MapRoute("MyRoute", "{controller}/{action}", null,  new[] { "UrlsAndRouting.Controllers" });
 
             ///Home/Index/9 9 will be skipped and Index will return ActionName View
             ///id is null but default value is provided
